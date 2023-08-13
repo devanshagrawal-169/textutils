@@ -69,7 +69,7 @@ function App() {
           {/* <TextForm showAlert={showAlert} heading="Enter the Text to analyze here" mode={mode}/> */}
         {/* </div> */}
       {/* // </BrowserRouter> */} 
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Navbar
           title="TextUtils"
           aboutText="About"
@@ -88,6 +88,27 @@ function App() {
                   heading="Enter Text to analyze "
                   mode={mode}
                 />
+              }
+            ></Route>
+          </Routes>
+        </div>
+      </BrowserRouter> */}
+      <BrowserRouter>
+        <Navbar
+          title="TextUtils"
+          
+          home="HOME"
+          aboutUs="ABOUTUS"
+          contactUs="CONTACTUS"
+        />
+        <div className="container">
+          <Routes>
+            <Route exact path="/About" element={<About />}></Route>
+            <Route
+              exact
+              path="/"
+              element={
+                <TextForm heading="Enter text Here" mode={mode} />
               }
             ></Route>
           </Routes>
